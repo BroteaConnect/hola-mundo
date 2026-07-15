@@ -2,6 +2,7 @@
 const PROJECT_NAME = 'Hola Mundo';
 const PROJECT_SLUG = 'hola-mundo';
 const PROJECT_DESCRIPTION = 'Página web estática con emojis saludando 👋';
+const GREETING_EMOJI = '\u{1F44B}';
 // Endpoint that receives requirement submissions (Brotea bot/orchestrator).
 const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT ?? '';
 ---
@@ -10,13 +11,13 @@ const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT ?? '';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{PROJECT_NAME}</title>
+    <title>{PROJECT_NAME} {GREETING_EMOJI}</title>
     <meta name="description" content={PROJECT_DESCRIPTION} />
   </head>
   <body>
     <main>
       <section class="hero">
-        <h1>{PROJECT_NAME}</h1>
+        <h1>{PROJECT_NAME} <span role="img" aria-label="waving hand">{GREETING_EMOJI}</span></h1>
         <p>{PROJECT_DESCRIPTION}</p>
       </section>
 
