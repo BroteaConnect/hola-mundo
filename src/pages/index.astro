@@ -43,6 +43,13 @@ const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT ?? '';
       </section>
     </main>
 
+    <footer>
+      <p>
+        Powered by
+        <a href="https://brotea.xyz" target="_blank" rel="noopener noreferrer">Brotea</a>
+      </p>
+    </footer>
+
     <script>
       const form = document.getElementById('requirements-form');
       const status = document.getElementById('form-status');
@@ -87,6 +94,8 @@ const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT ?? '';
       button { padding: .7rem 1.6rem; border: 0; border-radius: 8px; background: #1a7f37; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
       button:hover { background: #166b2f; }
       #form-status { min-height: 1.2em; color: #555; }
+      footer { max-width: 640px; margin: 0 auto; padding: 2rem 1.5rem; text-align: center; font-size: .85rem; color: #555; }
+      footer a { color: #1a7f37; }
     </style>
   </body>
 </html>
