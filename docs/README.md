@@ -12,6 +12,8 @@ The page renders:
   (see [Feature 001](features/001-greeting-emojis.md)).
 - A requirements form that POSTs JSON to the endpoint configured via
   `PUBLIC_REQUIREMENTS_ENDPOINT`.
+- A footer with a "Powered by Brotea" credit linking to brotea.xyz
+  (see [Feature 003](features/003-powered-by-brotea-footer.md)).
 
 ## Configuration
 
@@ -33,3 +35,4 @@ npm run preview  # serve the built output
 | # | Feature | Status |
 | --- | --- | --- |
 | [001](features/001-greeting-emojis.md) | Greeting emojis in title and hero heading | Merged ([PR #1](https://github.com/BroteaConnect/hola-mundo/pull/1), commit `851701d`) |
+| [003](features/003-powered-by-brotea-footer.md) | "Powered by Brotea" footer credit | Merged ([PR #4](https://github.com/BroteaConnect/hola-mundo/pull/4), commit `7fea097`) |
