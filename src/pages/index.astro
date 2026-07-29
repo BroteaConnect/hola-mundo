@@ -13,12 +13,15 @@ const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT ?? '';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{PROJECT_NAME} {GREETING_EMOJI}</title>
     <meta name="description" content={PROJECT_DESCRIPTION} />
+      <script is:inline defer src={import.meta.env.PUBLIC_UMAMI_SRC} data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}></script>
+      <script is:inline defer id="brotea-errors" src="/brotea-errors.js" data-dsn={import.meta.env.PUBLIC_GLITCHTIP_DSN}></script>
   </head>
   <body>
     <main>
       <section class="hero">
         <h1>{PROJECT_NAME} <span role="img" aria-label="waving hand">{GREETING_EMOJI}</span></h1>
         <p>{PROJECT_DESCRIPTION}</p>
+
         <p class="roadmap-link"><a href="/roadmap">Roadmap</a></p>
       </section>
 
@@ -90,6 +93,7 @@ const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT ?? '';
       .hero h1 { font-size: 2.5rem; margin: 0 0 .5rem; }
       .hero p { font-size: 1.15rem; color: #444; }
       .roadmap-link a { color: #1a7f37; font-weight: 600; }
+      .hero a { color: #1a7f37; }
       .form-card { margin-top: 3rem; background: #fff; border: 1px solid #e2e2e2; border-radius: 12px; padding: 2rem; }
       label { display: block; margin-bottom: 1rem; font-weight: 600; }
       input, textarea { display: block; width: 100%; margin-top: .35rem; padding: .6rem; border: 1px solid #ccc; border-radius: 8px; font: inherit; }
