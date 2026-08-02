@@ -8,6 +8,8 @@ RUN npm ci || npm install
 COPY . .
 # PUBLIC_* vars are inlined into the bundle at build time (C1 contract).
 # brotea:build-args
+ARG PUBLIC_BUILD_COMMIT
+ENV PUBLIC_BUILD_COMMIT=$PUBLIC_BUILD_COMMIT
 ARG PUBLIC_UMAMI_WEBSITE_ID=""
 ENV PUBLIC_UMAMI_WEBSITE_ID=$PUBLIC_UMAMI_WEBSITE_ID
 ARG PUBLIC_UMAMI_SRC=""
