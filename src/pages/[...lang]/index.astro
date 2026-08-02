@@ -13,7 +13,10 @@ const PROJECT_SLUG = 'hola-mundo';
 const PROJECT_DESCRIPTION = 'Página web estática con emojis saludando 👋';
 const GREETING_EMOJI = '\u{1F44B}';
 // Endpoint that receives requirement submissions (Brotea bot/orchestrator).
-const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT ?? '';
+// `||`, nunca `??`: el ARG del Dockerfile vale "" por defecto, que NO es
+// nullish, así que `??` dejaba el formulario muerto en cualquier build sin
+// la variable de Coolify. El default compilado lo hace imposible.
+const ENDPOINT = import.meta.env.PUBLIC_REQUIREMENTS_ENDPOINT?.trim() || 'https://api.brotea.dev/requirements';
 ---
 
 <html lang={locale} dir={dirOf(locale)}>
